@@ -1,0 +1,87 @@
+////////////ТОЛЬКО ФУНКЦИИ ЧТОБЫ НЕ КОМПИЛИЛОСЬ ВО ВСЕ LESS СТРАНИЦ И КОМПОНЕНТОВ
+.nobr() {
+	white-space: nowrap;
+}
+.desktop() {
+	@media @mobile {
+		display: none !important;
+	}
+	@media @tablet {
+		display: none !important;
+	}
+}
+.mobile() {
+	@media @desktop {
+		display: none !important;
+	}
+	@media @tablet {
+		display: none !important;
+	}
+}
+.tablet() {
+	@media @desktop {
+		display: none !important;
+	}
+	@media @mobile {
+		display: none !important;
+	}
+}
+.not-mobile() {
+	@media @mobile {
+		display: none !important;
+	}
+}
+.not-desktop() {
+	@media @desktop {
+		display: none !important;
+	}
+}
+.smooth() {
+	transition: 0.2s;
+}
+.text-center() {
+	text-align: center;
+}
+.text-right() {
+	text-align: right;
+}
+.text-left() {
+	text-align: left;
+}
+.float-left() {
+	float: left;
+}
+.float-right() {
+	float: right;
+}
+.no-paddings() {
+	padding-left: 0;
+	padding-right: 0;
+}
+.no-margins() {
+	margin-left: 0;
+	margin-right: 0;
+}
+.central() {
+	max-width: @central-width;
+	padding-left: @grid-gutter;
+	padding-right: @grid-gutter;
+	margin-left: auto;
+	margin-right: auto;
+	@media @mobile {
+		padding-left: @grid-gutter / 2;
+		padding-right: @grid-gutter / 2;
+	}
+}
+.central_no-padings() {
+	.no-paddings();
+}
+.central_no-margins() {
+	.no-margins();
+}
+.clamp(@count) {
+	display: -webkit-box;
+	-webkit-line-clamp: @count;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

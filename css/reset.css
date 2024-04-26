@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* --------------- reset.css --------------- */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.page {
+	overflow: hidden;
+}
+.swiper {
+	overflow: visible;
+}
+.swiper-wrapper {
+	height: auto;
+}
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  outline:none;
+}
+table {
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+td, td img {
+  vertical-align: top;
+} 
+input, select, button, textarea {
+  margin: 0;
+  font-size: 100%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+button {
+	cursor: pointer;
+}
+input[type="text"], input[type="password"], textarea {
+  padding: 0;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display:block;
+}
+nav ul, li {
+  list-style:none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html, body {
+  height:100%;
+}
+body {
+  text-align: left;
+  line-height: normal;
+}
+a, a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus, a:active {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+h1, .title__h1 {font-size: 88px;}
+h2, .title__h2 {font-size: 78px;}
+h3, .title__h3 {font-size: 40px;}
+h4, .title__h4 {font-size: 32px;}
+h5, .title__h5 {font-size: 24px;}
+h6, .title__h6 {font-size: 20px;}
+img{
+  max-width:100%;height: auto;
+}
+.clr{
+  clear:both;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
