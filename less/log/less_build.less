@@ -66,18 +66,18 @@
 @media @landscape {
 }.col {
     padding: 0 15px;
-    flex-grow: 1;
-    max-width: 300px;
+    max-width: 310px;
     margin-bottom: 40px;
+    display: grid;
+    @media @mobile {
+        justify-self: center;
+      }
 }
 .card {
    box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.22);
    background: @color_text_white;
-   display: grid;
-   height: 100%;
    &__title {
     padding: 20px 16px 30px 16px;
-    
    }
 }* {
 	box-sizing: border-box;
@@ -139,6 +139,24 @@ svg {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-title;
 }
+h6 {
+	line-height: 122%;
+	@media @desktop {
+        font-size: 18px;
+	}
+	@media @not-desktop {
+       font-size: 16px;
+	}
+}
+h5 {
+	line-height: 118%;
+	@media @desktop {
+        font-size: 22px;
+	}
+	@media @not-desktop {
+       font-size: 18px;
+	}
+}
 a {
 	transition: 0.1s;
 	&[href*="mailto:"] {
@@ -153,7 +171,6 @@ a {
 	}
 	
 }
-
 
 .container {
 	.central();
@@ -246,24 +263,39 @@ a {
 }.tabs {
     display: flex;
     margin: 0 -10px;
+    @media @mobile {
+      display: block;
+    }
   &__nav {
-  padding: 0 10px;
-  width: calc(100% / 12 * 3);
+    padding: 0 10px;
+    width: calc(100% / 12 * 3);
+    @media @mobile {
+    width: calc(100% / 12 * 12);
+    margin-bottom: 30px;
+  }
 }
   &__block {
     padding: 0 10px;
     width: calc(100% / 12 * 9);
+    max-width: 930px;
+    @media @mobile {
+      width: calc(100% / 12 * 12);
+    }
 }
   &__nav .tabs-button {
     display: block;
     color: @color_secondary-1;
-    font-weight: 400;
-    font-size: 18px;
     line-height: 133%;
     text-transform: uppercase;
     padding: 12px 15px;
     text-align: start;
     width: 100%;
+    @media @desktop {
+          font-size: 18px;
+    }
+    @media @not-desktop {
+         font-size: 14px;
+    }
   }
 }
 .tabs-button.active-tab {
@@ -278,8 +310,8 @@ a {
 }
 .tab-block {
     &__cards {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
         margin: 0 -10px;
     }
     &__title {

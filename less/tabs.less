@@ -1,24 +1,39 @@
 .tabs {
     display: flex;
     margin: 0 -10px;
+    @media @mobile {
+      display: block;
+    }
   &__nav {
-  padding: 0 10px;
-  width: calc(100% / 12 * 3);
+    padding: 0 10px;
+    width: calc(100% / 12 * 3);
+    @media @mobile {
+    width: calc(100% / 12 * 12);
+    margin-bottom: 30px;
+  }
 }
   &__block {
     padding: 0 10px;
     width: calc(100% / 12 * 9);
+    max-width: 930px;
+    @media @mobile {
+      width: calc(100% / 12 * 12);
+    }
 }
   &__nav .tabs-button {
     display: block;
     color: @color_secondary-1;
-    font-weight: 400;
-    font-size: 18px;
     line-height: 133%;
     text-transform: uppercase;
     padding: 12px 15px;
     text-align: start;
     width: 100%;
+    @media @desktop {
+          font-size: 18px;
+    }
+    @media @not-desktop {
+         font-size: 14px;
+    }
   }
 }
 .tabs-button.active-tab {
@@ -33,8 +48,8 @@
 }
 .tab-block {
     &__cards {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
         margin: 0 -10px;
     }
     &__title {
